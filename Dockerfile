@@ -8,8 +8,8 @@ RUN yum install -y httpd \
  unzip
 ADD https://www.tooplate.com/view/2137-barista-cafe/2137_barista_cafe.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip 2137-barista-cafe.zip
-RUN cp -rvf 2137-barista-cafe/* .
-RUN rm -rf 2137-barista-cafe 2137-barista-cafe.zip
+RUN unzip 2137_barista_cafe.zip
+RUN cp -rvf 2137_barista_cafe/* .
+RUN rm -rf 2137_barista_cafe 2137_barista_cafe.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
