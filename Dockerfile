@@ -8,7 +8,7 @@ RUN yum install -y httpd \
  unzip
 ADD https://www.tooplate.com/view/2137-barista-cafe/2137_barista_cafe /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip 2137_barista_cafe.zip
+RUN unzip 2137_barista_cafe
 RUN cp -rvf 2137_barista_cafe/* .
 RUN rm -rf 2137_barista_cafe 2137_barista_cafe.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
