@@ -6,10 +6,10 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.tooplate.com/view/2137-barista-cafe/2137_barista_cafe /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/mediplus-lite.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip 2137_barista_cafe
-RUN cp -rvf 2137_barista_cafe/* .
-RUN rm -rf 2137_barista_cafe 2137_barista_cafe.zip
+RUN unzip mediplus-lite.zip
+RUN cp -rvf mediplus-lite/* .
+RUN rm -rf mediplus-lite.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
