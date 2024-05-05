@@ -10,6 +10,6 @@ ADD https://html5up.net/lens/download /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip download.zip
 RUN cp -rvf download/* .
-RUN rm -rf download.zip
+RUN rm -rf download download.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
