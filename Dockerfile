@@ -8,8 +8,8 @@ RUN yum install -y httpd \
  unzip
 ADD https://html5up.net/lens/download /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip html5up-lens.zip
-RUN cp -rvf html5up-lens/* .
-RUN rm -rf html5up-lens.zip
+RUN unzip download.zip
+RUN cp -rvf download/* .
+RUN rm -rf download.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
