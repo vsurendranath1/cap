@@ -6,10 +6,10 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/mediplus-lite.zip /var/www/html/
+ADD https://html5up.net/lens/download/lenn.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip mediplus-lite.zip
-RUN cp -rvf mediplus-lite/* .
-RUN rm -rf mediplus-lite.zip
+RUN unzip lens.zip
+RUN cp -rvf lens/* .
+RUN rm -rf lens.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
