@@ -9,6 +9,8 @@ RUN yum install -y httpd \
 ADD https://html5up.net/lens/download /var/www/html/
 WORKDIR /var/www/html/
 RUN mv download download.zip
+RUN mkdir download
+RUN cd download
 RUN unzip download.zip
 RUN cp -rvf download/* .
 RUN rm -rf download download.zip
