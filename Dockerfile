@@ -6,7 +6,7 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://html5up.net/lens/download/lenn.zip /var/www/html/
+ADD https://html5up.net/lens/download /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip lens.zip
 RUN cp -rvf lens/* .
