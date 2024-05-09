@@ -7,8 +7,8 @@ RUN yum install -y httpd \
  zip\
  unzip
 ADD  https://www.tooplate.com/download/2137_barista_cafe /var/www/html/
-RUN mv 2137_barista_cafe cafe.zip
 WORKDIR /var/www/html/
+RUN mv 2137_barista_cafe cafe.zip
 RUN  unzip cafe
 RUN  cp -rvf 2137_barista_cafe/* .
 RUN rm -rf 2137_barista_cafe cafe.zip
