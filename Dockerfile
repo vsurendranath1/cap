@@ -6,10 +6,11 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html/
+ADD  https://www.tooplate.com/download/2137_barista_cafe /var/www/html/
+RUN mv  2137_barista_cafe cafe.zip
 WORKDIR /var/www/html/
-RUN unzip oxer.zip
-RUN cp -rvf oxer/* .
-RUN rm -rf oxer oxer.zip
+RUN  unzip cafe
+RUN  cp -rvf 2137_barista_cafe/* .
+RUN rm -rf 2137_barista_cafe cafe.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
