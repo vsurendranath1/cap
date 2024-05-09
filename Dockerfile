@@ -6,10 +6,10 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://html5up.net/lens/download /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip download.zip
-RUN cp -rvf download/* .
-RUN rm -rf download download.zip
+RUN unzip oxer.zip
+RUN cp -rvf oxer/* .
+RUN rm -rf oxer oxer.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
